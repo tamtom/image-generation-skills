@@ -42,9 +42,28 @@ Generate and edit images using OpenAI's GPT Image 1.5 model via the Images API.
 - Transparent background support
 - Output formats: PNG, WebP, JPEG
 
-### gemini-imagen *(coming soon)*
+### gemini-nano-banana-2
 
-Image generation using Google's Gemini Imagen model.
+Generate and edit images using Google's Gemini Nano Banana 2 model (`gemini-3.1-flash-image-preview`) — the latest and most capable Gemini image model.
+
+**Use when:**
+- You need to generate images from text descriptions using Gemini
+- You want to edit or modify existing images
+- You need multi-image compositing, style transfer, or character consistency
+- You want real-time data in images (weather, news) via Google Search grounding
+- You need accurate depictions of real-world subjects via Google Image Search grounding
+- You want high-resolution output up to 4K
+
+**Capabilities:**
+- Text-to-image generation with advanced text rendering
+- Image editing (single or multi-image input, up to 14 reference images)
+- Google Web Search grounding (real-time data)
+- Google Image Search grounding (visual reference from the web)
+- Controllable thinking levels (minimal/high)
+- 14 aspect ratios (1:1, 1:4, 1:8, 2:3, 3:2, 3:4, 4:1, 4:3, 4:5, 5:4, 8:1, 9:16, 16:9, 21:9)
+- 4 resolutions (512, 1K, 2K, 4K)
+- Output formats: PNG, WebP, JPEG
+- Built-in cost estimation with confirmation for requests ≥ $0.10
 
 ## Skill Structure
 
