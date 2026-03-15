@@ -184,10 +184,14 @@ def generate_image(
         if part.text is not None:
             texts.append(part.text)
         elif part.inline_data is not None:
-            image = part.as_image()
-            buf = BytesIO()
-            image.save(buf, format="PNG")
-            images.append(buf.getvalue())
+            raw = part.inline_data
+            if hasattr(raw, 'data') and raw.data:
+                images.append(raw.data)
+            else:
+                image = part.as_image()
+                buf = BytesIO()
+                image.save(buf, "PNG")
+                images.append(buf.getvalue())
 
     return images, texts
 
